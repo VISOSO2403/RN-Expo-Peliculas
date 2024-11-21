@@ -10,6 +10,9 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
+// Import your global CSS file
+import "../global.css";
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -30,8 +33,8 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="+not-found.tsx" />
+      <Stack.Screen name="index" />
+      <Stack.Screen name="+not-found" />
     </Stack>
   );
 }
